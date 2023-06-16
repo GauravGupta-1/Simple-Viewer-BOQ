@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- jQuery for DOM manipualtion -->
+    <script src="jquery.min.js"></script>
+
+    <!-- Notification ballons -->
+    <script src="notify.min.js"></script>
+
+    <!-- Autodesk Forge Viewer files -->
+    <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css" type="text/css">
+    <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <script src="ForgeViewer.js"></script>
+
+    <!-- XLS related libraries -->
+    <script src="Blob.js"></script> <!-- https://github.com/eligrey/Blob.js -->
+    <script src="FileSaver.min.js"></script> <!-- https://github.com/eligrey/FileSaver.js -->
+    <script src="xlsx.core.min.js"></script> <!-- https://github.com/SheetJS/js-xlsx -->
+    <script src="ForgeXLS.js"></script>
+
+    <!-- Basic script for this page -->
+    <script language="JavaScript">
+        // for this sample, the URN is hardcoded
+        var sampleURN;
+
+        // wait until the document is ready...
+        $(document).ready(function () {
+            jQuery.ajax({
+                url: '/api/models',
+                success: function (models) {
+                    if (models) {
+                        $('#downloadExcel').click(downloadExcel);
+                        sampleURN = models[0].urn;
+                        showModel(sampleURN);
+                    }
+                }
+            });
+        });
+
+        // this will prepare and download the XLS file
+        function downloadExcel() {
+            $('#downloadExcel').prop("disabled", true);
+            getForgeToken(function (access_token, expires_in) {
+                ForgeXLS.downloadXLSX(sampleURN, access_token, statusCallback /*Optional*/);
+            });
+        }
+
+        function statusCallback(completed, message) {
+            $.notify(message, 'info');
+            $('#downloadExcel').prop("disabled", !completed);
+        }
+
+        // get Forge token (use your data:read endpoint here)
+        // this sample is using client-side JavaScript only, so no
+        // back-end that authenticate with Forge nor files, therefore
+        // is using files from another sample. On your implementation,
+        // you should replace this with your own Token endpoint
+        function getForgeToken(callback) {
+            jQuery.ajax({
+                url: '/api/auth/token',
+                success: function (oauth) {
+                    if (callback)
+                        callback(oauth.access_token, oauth.expires_in);
+                }
+            });
+        }
+    </script>
+
+
+
+        
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="icon" type="image/x-icon" href="https://cdn.autodesk.io/favicon.ico">
+        <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.css">
+        <link rel="stylesheet" href="main.css">
+        <title>Autodesk Platform Services: Simple Viewer</title>
+        </head>
+
+        <body>
+            <div id="header">
+                <img class="logo" src="https://cdn.autodesk.io/logo/black/stacked.png" alt="Autodesk Platform Services">
+                <span class="title">Simple Viewer</span>
+                <select name="models" id="models"></select>
+                <button id="upload" title="Upload New Model">Upload</button>
+                <button id="downloadExcel" onclick="downloadExcel()">Export to Excel</button>
+                <input style="display: none" type="file" id="input">
+            </div>
+            <div id="preview"></div>
+            <div id="overlay"></div>
+            <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.js"></script>
+            <script src="main.js" type="module"></script>
+        </body>
+
+</html>

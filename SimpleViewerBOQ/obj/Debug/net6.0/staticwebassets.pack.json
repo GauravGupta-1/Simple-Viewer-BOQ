@@ -1,0 +1,65 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\SI20353495\\source\\repos\\SimpleViewerBOQ\\SimpleViewerBOQ\\wwwroot\\Blob.js",
+      "PackagePath": "staticwebassets\\Blob.js"
+    },
+    {
+      "Id": "C:\\Users\\SI20353495\\source\\repos\\SimpleViewerBOQ\\SimpleViewerBOQ\\wwwroot\\FileSaver.min.js",
+      "PackagePath": "staticwebassets\\FileSaver.min.js"
+    },
+    {
+      "Id": "C:\\Users\\SI20353495\\source\\repos\\SimpleViewerBOQ\\SimpleViewerBOQ\\wwwroot\\ForgeViewer.js",
+      "PackagePath": "staticwebassets\\ForgeViewer.js"
+    },
+    {
+      "Id": "C:\\Users\\SI20353495\\source\\repos\\SimpleViewerBOQ\\SimpleViewerBOQ\\wwwroot\\ForgeXLS.js",
+      "PackagePath": "staticwebassets\\ForgeXLS.js"
+    },
+    {
+      "Id": "C:\\Users\\SI20353495\\source\\repos\\SimpleViewerBOQ\\SimpleViewerBOQ\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\SI20353495\\source\\repos\\SimpleViewerBOQ\\SimpleViewerBOQ\\wwwroot\\jquery.min.js",
+      "PackagePath": "staticwebassets\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\SI20353495\\source\\repos\\SimpleViewerBOQ\\SimpleViewerBOQ\\wwwroot\\main.css",
+      "PackagePath": "staticwebassets\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\SI20353495\\source\\repos\\SimpleViewerBOQ\\SimpleViewerBOQ\\wwwroot\\main.js",
+      "PackagePath": "staticwebassets\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\SI20353495\\source\\repos\\SimpleViewerBOQ\\SimpleViewerBOQ\\wwwroot\\notify.min.js",
+      "PackagePath": "staticwebassets\\notify.min.js"
+    },
+    {
+      "Id": "C:\\Users\\SI20353495\\source\\repos\\SimpleViewerBOQ\\SimpleViewerBOQ\\wwwroot\\viewer.js",
+      "PackagePath": "staticwebassets\\viewer.js"
+    },
+    {
+      "Id": "C:\\Users\\SI20353495\\source\\repos\\SimpleViewerBOQ\\SimpleViewerBOQ\\wwwroot\\xlsx.core.min.js",
+      "PackagePath": "staticwebassets\\xlsx.core.min.js"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.SimpleViewerBOQ.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.SimpleViewerBOQ.props",
+      "PackagePath": "build\\SimpleViewerBOQ.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.SimpleViewerBOQ.props",
+      "PackagePath": "buildMultiTargeting\\SimpleViewerBOQ.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.SimpleViewerBOQ.props",
+      "PackagePath": "buildTransitive\\SimpleViewerBOQ.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

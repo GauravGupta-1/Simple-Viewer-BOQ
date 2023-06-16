@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "7DAxbW36FXILBxvYT25KxulTIfZ/eZeb6Y1mAjWJ5ko23RDbA/A9NUEyBD093rR+nJtF/COQUn0bZ+OoPaOyDw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\SI20353495\\source\\repos\\SimpleViewerBOQ\\SimpleViewerBOQ\\SimpleViewerBOQ.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SI20353495\\.nuget\\packages\\autodesk.forge\\1.9.7\\autodesk.forge.1.9.7.nupkg.sha512",
+    "C:\\Users\\SI20353495\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\SI20353495\\.nuget\\packages\\node.js\\0.12.7\\node.js.0.12.7.nupkg.sha512",
+    "C:\\Users\\SI20353495\\.nuget\\packages\\nogit\\0.1.0\\nogit.0.1.0.nupkg.sha512",
+    "C:\\Users\\SI20353495\\.nuget\\packages\\npm\\3.5.2\\npm.3.5.2.nupkg.sha512",
+    "C:\\Users\\SI20353495\\.nuget\\packages\\restsharp\\108.0.1\\restsharp.108.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
